@@ -128,6 +128,20 @@ Module ProgramFlowS25
 
         'nested loop
 
+        Dim result As String
+
+        For i = 1 To 10
+
+            For j = 1 To 10
+                'result = CStr(i + j)
+                result = (i + j).ToString("E2")
+                result = result.PadLeft(8)
+                'result = StrReverse(result)
+                Console.Write(result)
+            Next
+            Console.WriteLine()
+        Next
+
     End Sub
 
 End Module
