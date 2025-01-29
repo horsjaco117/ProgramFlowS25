@@ -49,47 +49,84 @@ Module ProgramFlowS25
         End If
 
         'If nothing evaluates true the else will be selected
-        If funnyNumber > 6 Then
-            Console.WriteLine($"{funnyNumber} is a big number!")
+        'If funnyNumber > 6 Then
+        '    Console.WriteLine($"{funnyNumber} is a big number!")
 
-        ElseIf funnyNumber > 3 Then
-            Console.WriteLine($"Sorry not tall enough...")
-        ElseIf funnyNumber > 4 Then
-            Console.WriteLine($"Who cares")
-        Else
-            Console.WriteLine($"Not sure what happened")
-        End If
+        'ElseIf funnyNumber > 3 Then
+        '    Console.WriteLine($"Sorry not tall enough...")
+        'ElseIf funnyNumber > 4 Then
+        '    Console.WriteLine($"Who cares")
+        'Else
+        '    Console.WriteLine($"Not sure what happened")
+        'End If
 
-        Do
-            'If one is true it skips the rest
-            Console.WriteLine("Please enter your age:")
-            userInput = Console.ReadLine()
-            Try
-                funnyNumber = CInt(userInput)
+        'Do
+        '    'If one is true it skips the rest
+        '    Console.WriteLine("Please enter your age:")
+        '    userInput = Console.ReadLine()
 
-                Select Case funnyNumber
-                    Case 0 To 3
-                        Console.WriteLine("Where are your parents?")
-                    Case 4 To 10
-                        Console.WriteLine("Sorry kid, why don't you try the tea cups...?")
-                    Case 11 To 64
-                        Console.WriteLine("Enjoy the ride")
-                    Case 65 To 99
-                        Console.WriteLine("Please sign this liability release form.")
-                    Case > 100
-                        Console.WriteLine("Someone misplaced their meemah!")
-                    Case Else
-                        Console.WriteLine("No beans")
-                End Select
+        '    Try 'prompt for user's age
+        '        funnyNumber = CInt(userInput)
 
-            Catch ex As Exception
-                Console.WriteLine($"You entered {userInput}.")
+        '        Select Case funnyNumber
+        '            Case 0 To 3
+        '                Console.WriteLine("Where are your parents?")
+        '            Case 4 To 10
+        '                Console.WriteLine("Sorry kid, why don't you try the tea cups...?")
+        '            Case 11 To 64
+        '                Console.WriteLine("Enjoy the ride")
+        '            Case 65 To 99
+        '                Console.WriteLine("Please sign this liability release form.")
+        '            Case > 100
+        '                Console.WriteLine("Someone misplaced their meemah!")
+        '            Case Else
+        '                Console.WriteLine("No beans")
+        '        End Select
 
-            End Try
+        '    Catch ex As Exception
+        '        Console.WriteLine($"You entered {userInput}.")
+
+        '    End Try
 
 
-        Loop Until userInput = "Q"
-        Console.WriteLine("Have a nice day!")
+        'Loop Until userInput = "Q"
+        'Console.WriteLine("Have a nice day!")
+
+        'userInput = "5"
+
+        'Do
+        '    'Console.WriteLine("Type something and press enter")
+        '    'userInput = Console.ReadLine()
+        '    Console.WriteLine($"In the Do, Loop Until: ")
+        '    userInput = "Q"
+        'Loop Until userInput = "Q"
+
+        'Do Until userInput = "Q"
+        '    Console.WriteLine("type something and press enter")
+        '    userInput = Console.ReadLine()
+        '    Console.WriteLine($"In the DO While Loop ")
+        'Loop
+
+
+        For i As Integer = 1 To 10 Step 1
+            Console.WriteLine(i)
+        Next
+
+        Console.WriteLine(StrDup(89, "*"))
+
+        For i = 1 To 10 Step 0.5
+            Console.WriteLine(i)
+        Next
+
+        Console.WriteLine(StrDup(89, "*"))
+
+        For i = 1 To 10
+            Console.WriteLine(i)
+        Next
+
+        Console.WriteLine(StrDup(89, "*"))
+
+        'nested loop
 
     End Sub
 
