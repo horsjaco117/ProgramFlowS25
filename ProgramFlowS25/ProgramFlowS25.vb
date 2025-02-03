@@ -13,7 +13,7 @@ Module ProgramFlowS25
     Sub Main()
         Dim funnyNumber As Integer
         Dim userInput As String
-
+        Dim getOutofHEre As Boolean
         'Assign number to 5
         funnyNumber = 5
 
@@ -141,6 +141,26 @@ Module ProgramFlowS25
             Next
             Console.WriteLine()
         Next
+
+        getOutofHEre = False 'setting this to false allows us to enter our loop
+        Do Until userInput = "Q" Or getOutofHEre = True
+            getOutofHEre = True 'setting this to true saves space and allows us to function the same
+            Select Case userInput
+                Case "1"
+                'do choice 1
+                Case "2"
+                'do choice 2
+                Case "3"
+                'do choice 43
+                Case "4"
+                ' do choice 4
+                Case "Q"
+                    'user has quit
+                Case Else
+                    'invalid choice
+                    getOutofHEre = False
+            End Select
+        Loop
 
     End Sub
 
